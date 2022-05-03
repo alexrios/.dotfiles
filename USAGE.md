@@ -1,5 +1,14 @@
 # DOTFILES REPO USAGE
 
+### Packages
+> cd ~
+ 
+> pacman -S yay
+
+> wget -c https://gist.github.com/865f7f3b92ccc8d5c5f1fe8908cdf936 -o packages.txt
+
+> yay -S --needed --noconfirm - < ~/packages.txt
+
 ### Cloning
 > cd ~
 
