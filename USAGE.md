@@ -3,6 +3,9 @@
 ### Cloning
 > cd ~
 
+IF ~/.gitignore not exists THEN
+> echo '*' > ~/.gitignore
+
 > git clone --no-checkout git@github.com:alexrios/.dotfiles.git
 
 > cd ~/.dotfiles
