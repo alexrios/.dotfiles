@@ -1,0 +1,67 @@
+diff --git a/fonts.ini b/fonts.ini
+index 059569e..a1ece56 100644
+--- a/fonts.ini
++++ b/fonts.ini
+@@ -1,9 +1,9 @@
+-font-0 = "JetBrainsMono Nerd Font:style=Medium:size=9;3"
+-font-1 = "JetBrainsMono Nerd Font:style=Bold:size=9;3"
++font-0 = "JetBrainsMono Nerd Font:style=Medium:size=14;3"
++font-1 = "JetBrainsMono Nerd Font:style=Bold:size=14;3"
+ font-2 = "JetBrainsMono Nerd Font:size=19;5"
+ 
+-font-3 = "Material Icons:size=11;4"
+-font-4 = "Material Icons Outlined:size=11;4"
+-font-5 = "Material Icons Round:size=11;4"
+-font-6 = "Material Icons Sharp:size=11;4"
+-font-7 = "Material Icons TwoTone:size=11;4"
++font-3 = "Material Icons:size=14;4"
++font-4 = "Material Icons Outlined:size=14;4"
++font-5 = "Material Icons Round:size=14;4"
++font-6 = "Material Icons Sharp:size=14;4"
++font-7 = "Material Icons TwoTone:size=14;4"
+diff --git a/modules.ini b/modules.ini
+index 837c478..c64fb45 100644
+--- a/modules.ini
++++ b/modules.ini
+@@ -1,3 +1,3 @@
+-modules-left = bspwm
+-modules-center = round-left-blue weather date round-right-blue margin round-left mpd round-right
+-modules-right = cpu memory pulseaudio xbacklight
++modules-left = i3 round-right-blue
++modules-center = round-left-blue date mpd round-right-blue
++modules-right = round-left-blue  wlan cpu memory xbacklight pulseaudio
+diff --git a/themes/gruvbox/config.ini b/themes/gruvbox/config.ini
+index 727f6b5..b501c43 100644
+--- a/themes/gruvbox/config.ini
++++ b/themes/gruvbox/config.ini
+@@ -10,8 +10,8 @@ offset-y = 0
+ bottom = true
+ fixed-center = true
+ 
+-wm-restack = bspwm
+-; wm-restack = i3
++; wm-restack = bspwm
++wm-restack = i3
+ 
+ override-redirect = false
+ 
+diff --git a/themes/gruvbox/modules/wlan.ini b/themes/gruvbox/modules/wlan.ini
+index 0dc648c..0edee67 100644
+--- a/themes/gruvbox/modules/wlan.ini
++++ b/themes/gruvbox/modules/wlan.ini
+@@ -1,13 +1,13 @@
+ [module/wlan]
+ type = internal/network
+-interface = wlp2s0
++interface = wlan0
+ interval = 1.0
+ 
+ format-connected = <label-connected>
+ format-connected-padding = 1
+ format-connected-prefix = %{T5}%{T-}
+ format-connected-prefix-foreground = ${colors.orange}
+-label-connected = %{T5}%{T-}%{T2}%downspeed%%{T-}
++label-connected = %{T5}%{T-}%{T2}%downspeed%%{T-}
+ label-connected-foreground = ${colors.fg}
+ label-connected-padding = 1
+ 
